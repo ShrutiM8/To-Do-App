@@ -1,0 +1,39 @@
+.input-wrapper { margin-bottom: 20px; }
+.add-task-trigger {
+  width: 100%; padding: 14px;
+  background: var(--card-bg); border: 2px dashed var(--border);
+  border-radius: 10px; color: var(--text-muted); font-size: 14px;
+  font-weight: 600; cursor: pointer; transition: all 0.15s;
+}
+.add-task-trigger:hover { border-color: #6366F1; color: #6366F1; background: rgba(99,102,241,0.05); }
+.input-container {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 12px; padding: 20px;
+  animation: slideDown 0.2s ease;
+}
+@keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+.form-title { font-size: 16px; font-weight: 700; margin-bottom: 16px; color: var(--text-main); }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+.span-2 { grid-column: span 2; }
+.form-group { display: flex; flex-direction: column; gap: 4px; }
+.form-group label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.form-input {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: 9px 12px; color: var(--text-main);
+  font-size: 13px; transition: border-color 0.15s; font-family: inherit;
+}
+.form-input:focus { outline: none; border-color: #6366F1; }
+.form-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.btn-cancel {
+  padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border);
+  background: transparent; color: var(--text-muted); font-size: 13px;
+  font-weight: 600; cursor: pointer; transition: all 0.15s; font-family: inherit;
+}
+.btn-cancel:hover { color: var(--text-main); border-color: var(--text-muted); }
+.btn-submit {
+  padding: 8px 20px; border-radius: 8px; border: none;
+  background: linear-gradient(135deg, #6366F1, #8B5CF6); color: white;
+  font-size: 13px; font-weight: 600; cursor: pointer; transition: opacity 0.15s; font-family: inherit;
+}
+.btn-submit:hover { opacity: 0.88; }
+@media (max-width: 500px) { .form-grid { grid-template-columns: 1fr; } .span-2 { grid-column: span 1; } }
