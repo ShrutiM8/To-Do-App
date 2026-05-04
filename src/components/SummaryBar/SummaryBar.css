@@ -1,0 +1,25 @@
+.summary-bar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.summary-item {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: transform 0.15s;
+}
+.summary-item:hover { transform: translateY(-2px); }
+.summary-value { display: block; font-size: 26px; font-weight: 700; }
+.summary-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+@media (max-width: 640px) {
+  .summary-bar { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 375px) {
+  .summary-bar { grid-template-columns: repeat(2, 1fr); }
+}
